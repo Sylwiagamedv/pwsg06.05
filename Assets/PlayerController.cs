@@ -18,12 +18,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
        
-        if(Input.GetKey(upKey))
+        if(Input.GetKey(upKey) && transform.position.y <5)
         {
             transform.position += Vector3.up * Time.deltaTime * speed;
         }
 
-        if (Input.GetKey(downKey))
+        if (Input.GetKey(downKey) && transform.position.y > -5)
         {
             transform.position += Vector3.down * Time.deltaTime * speed;
         }
